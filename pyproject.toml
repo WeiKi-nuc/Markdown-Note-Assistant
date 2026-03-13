@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "markdown-note-assistant"
+version = "1.0.0"
+description = "A powerful Markdown note-taking application with real-time preview"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Markdown Note Assistant Team"}
+]
+keywords = ["markdown", "notes", "editor", "tkinter"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Editors",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+
+dependencies = [
+    "markdown>=3.5.0",
+    "PyYAML>=6.0.1",
+    "Pillow>=10.0.0",
+    "pygments>=2.17.0",
+    "watchdog>=3.0.0",
+    "python-frontmatter>=1.0.0",
+    "beautifulsoup4>=4.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.5.0",
+    "flake8>=6.1.0",
+]
+export = [
+    "weasyprint>=60.0",
+    "python-docx>=1.1.0",
+]
+
+[project.scripts]
+md-note = "markdown_note_assistant.main:main"
+
+[project.gui-scripts]
+md-note-gui = "markdown_note_assistant.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+markdown_note_assistant = ["resources/**/*", "py.typed"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+show_error_codes = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"

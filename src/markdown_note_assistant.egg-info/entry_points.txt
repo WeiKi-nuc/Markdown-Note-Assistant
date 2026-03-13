@@ -1,0 +1,5 @@
+[console_scripts]
+md-note = markdown_note_assistant.main:main
+
+[gui_scripts]
+md-note-gui = markdown_note_assistant.main:main
