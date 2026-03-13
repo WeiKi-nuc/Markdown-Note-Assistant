@@ -1,0 +1,52 @@
+{
+  "editor": {
+    "font_family": "Consolas",
+    "font_size": 12,
+    "line_height": 1.5,
+    "auto_save_interval": 30000,
+    "word_wrap": true,
+    "show_line_numbers": true,
+    "tab_size": 4,
+    "use_spaces": true
+  },
+  "preview": {
+    "theme": "light",
+    "code_highlight_theme": "default",
+    "math_enabled": true,
+    "mermaid_enabled": true,
+    "sync_scroll": true
+  },
+  "ui": {
+    "layout": "split",
+    "sidebar_width": 250,
+    "window_width": 1400,
+    "window_height": 900,
+    "window_x": 52,
+    "window_y": 52,
+    "maximized": false
+  },
+  "shortcuts": {
+    "new_note": "Ctrl+N",
+    "open_note": "Ctrl+O",
+    "save_note": "Ctrl+S",
+    "search": "Ctrl+F",
+    "global_search": "Ctrl+Shift+F",
+    "quick_open": "Ctrl+P",
+    "toggle_preview": "Ctrl+E",
+    "toggle_sidebar": "Ctrl+B",
+    "focus_mode": "F11",
+    "insert_link": "Ctrl+K",
+    "insert_image": "Ctrl+Shift+I",
+    "bold": "Ctrl+B",
+    "italic": "Ctrl+I",
+    "code": "Ctrl+Shift+C"
+  },
+  "advanced": {
+    "image_compression_quality": 85,
+    "auto_backup": true,
+    "backup_interval": 300000,
+    "backup_count": 10,
+    "default_notebook": "E:\\h好玩的小项目\\tre项目\\Markdown-Note-Assistant\\Markdown-Note-Assistant-kimi\\MarkdownNotes",
+    "assets_folder_name": "assets"
+  }
+}
